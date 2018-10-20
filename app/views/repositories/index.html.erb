@@ -25,7 +25,7 @@
             <tbody>
               <% @responses.each do |repo| %>
                 <tr role="row" class="odd" data-no-turbolink >
-                  <td class="col-md-3"><%= link_to repo['name'], repository_path(id: repo['name']) %></td>
+                  <td class="col-md-3"><%= link_to repo['name'], repository_path(id: repo['name'], description: repo['description']) %></td>
                 </tr>
               <% end %>
             </tbody>
