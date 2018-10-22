@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", as: :signout
 
-  resources :repositories
+  resources :repositories do
+    member do
+      get :get_repo_commits
+    end
+  end
 end
