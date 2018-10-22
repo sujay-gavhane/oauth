@@ -1,0 +1,19 @@
+.Header {
+    z-index: 32;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(36, 41, 46);
+}
+.m-t-20{
+	margin-top: 20px;
+}
+.m-t-150{
+	margin-top: 150px;
+}
+.m-l-15{
+	margin-left: 15px;
+}
+table{
+	text-align: left !important;
+}
