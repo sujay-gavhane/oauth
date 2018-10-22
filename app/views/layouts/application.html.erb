@@ -21,6 +21,10 @@
         <div class="page-content text-center">
           <div class="row">
             <div class="col-md-12 m-t-150">
+            <% if current_user %>
+              <h5><%= link_to 'Log Out', signout_path, class: 'btn btn-primary m-t-20' %> <%= "Welcome #{current_user.name}" %></h5>
+              <%= link_to 'Repositories', repositories_path, class: 'm-l-15' %>
+            <% end %>
             </div>
           </div>
           <% flash.each do |type, msg|%>
