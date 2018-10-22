@@ -1,0 +1,16 @@
+<h4>Select Date Range to view commits</h4>
+<div class="row">
+	<div class="col-md-10 input-daterange input-group" id="datepicker" data-provide="datepicker">
+		<div class="col-md-12 pull-left">
+			<div class="row">
+				<span class="input-group-addon">From</span>
+				<input type="text" class="col-md-5 input-sm form-control commit-datepicker" id="from_date" name="from_date" style='position: relative;' />
+				<span class="input-group-addon">To</span>
+				<input type="text" class="col-md-5 input-sm form-control commit-datepicker" id="to_date" name="to_date" style='position: relative;' />
+			</div>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<%= submit_tag 'Search', class: 'btn btn-primary'  %>
+	</div>
+</div>

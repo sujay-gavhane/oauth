@@ -11,8 +11,8 @@ module Services
         self.class.get("/users/#{username}/repos?access_token=#{user_token}&type=all", {headers: self.headers(token)})
       end
 
-      def show(token, name, user_token, username)
-        self.class.get("/repos/#{username}/#{name}/commits?access_token=#{user_token}", {headers: self.headers(token)})
+      def show(token, name, user_token, username, from_date, to_date)
+        self.class.get("/repos/#{username}/#{name}/commits?access_token=#{user_token}&since=#{from_date}&until=#{to_date}", {headers: self.headers(token)})
       end
     end
   end

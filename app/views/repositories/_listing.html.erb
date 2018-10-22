@@ -1,0 +1,43 @@
+<% if @response.blank? %>
+  <div class="portlet-body">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>NO commits present for selected date range.</h4>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h4>Commits</h4>
+  <table class="table table-striped table-bordered table-hover no-footer" role="grid">
+    <thead>
+      <tr >
+        <div class="row">
+            <div class="col-md-7">
+              <th>Commit Message</th>
+            </div>
+            <div class="col-md-3">
+              <th>Date</th>
+            </div>
+        </div>
+      </tr>
+    </thead>
+    <tbody>
+      <% @response.each do |commit| %>
+        <tr>
+          <div class="row">
+            <div class="col-md-7">
+              <td>
+                  <%= commit['commit']['message']%>
+              </td>
+            </div>
+            <div class="col-md-3">
+              <td>
+                <%= commit['commit']['committer']['date']%>
+              </td>
+            </div>
+          </div>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<%end%>
