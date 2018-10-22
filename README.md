@@ -1,6 +1,6 @@
 # oAuth
 
-###Steps to Run In Development Environment
+### Steps to Run In Development Environment
 1. Clone the repository
 2. Run `bundle install` command in projects root directory
 3. Add `database`, `username` and `password` for your postgres DB in development environment.
