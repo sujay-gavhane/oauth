@@ -3,3 +3,10 @@ $('.commits-listing').html("<%= escape_javascript(render partial: 'listing' )%>"
 $('.commit-datepicker').datepicker({
 	format: 'yyyy-mm-dd'
 });
+d3.selectAll("tr")
+  .data([10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30])
+    .style("font-size", function(d) { return d + "px"; });
+
+d3.selectAll("tr").style("color", function() {
+  return "hsl(" + Math.random() * 360 + ",100%,50%)";
+});
