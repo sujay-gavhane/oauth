@@ -14,6 +14,7 @@
 //= require rails-ujs
 //= require moment.min
 //= require bootstrap-datepicker.min
+//- require d3.min
 //= require jquery-ui.min
 //= require activestorage
 //= require turbolinks
