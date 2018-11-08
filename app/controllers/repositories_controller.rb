@@ -11,9 +11,6 @@ class RepositoriesController < ApplicationController
     @responses = JSON.parse(@responses.body)
   end
 
-  def show
-  end
-
   def get_repo_commits
     from_date = Date.strptime(params[:from_date], '%m/%d/%Y').strftime('%Y-%m-%d')
     to_date = Date.strptime(params[:to_date], '%m/%d/%Y').strftime('%Y-%m-%d')
