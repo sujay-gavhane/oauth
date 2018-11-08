@@ -1,3 +1,4 @@
+# Application controller base controller to all other controllers
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
@@ -10,6 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    redirect_to root_path unless current_user       
+    redirect_to root_path unless current_user
   end
 end

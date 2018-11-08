@@ -19,7 +19,7 @@
               </tr>
             </tbody>
           </table>
-          <%= form_tag(get_repo_commits_repository_path(id: params['id']), method: :get, remote: true) do %>
+          <%= form_tag(repo_commits_repository_path(id: params['id']), method: :get, remote: true) do %>
             <div class="form-group">
               <%= render 'search' %>
             </div>

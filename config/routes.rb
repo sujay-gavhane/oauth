@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :repositories do
     member do
-      get :get_repo_commits
+      get :repo_commits
     end
   end
 end

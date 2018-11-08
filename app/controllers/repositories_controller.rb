@@ -1,5 +1,5 @@
 require 'services/github'
-
+# Repositories controller
 class RepositoriesController < ApplicationController
   before_action :authenticate_user
   
@@ -11,8 +11,9 @@ class RepositoriesController < ApplicationController
     @responses = JSON.parse(@responses.body)
   end
 
-  def get_repo_commits
-    from_date = Date.strptime(params[:from_date], '%m/%d/%Y').strftime('%Y-%m-%d')
+  def repo_commits
+    from_date = Date.strptime(params[:from_date], '%m/%d/%Y')
+                    .strftime('%Y-%m-%d')
     to_date = Date.strptime(params[:to_date], '%m/%d/%Y').strftime('%Y-%m-%d')
     @response = github_service.show(
       ENV['GITHUB_SECRET_TOKEN'], params[:id],
