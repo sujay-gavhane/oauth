@@ -27,7 +27,7 @@
           <div class="row">
             <div class="col-md-7">
               <td>
-                  <%= commit['commit']['message']%>
+                <%= commit['commit']['message']%>
               </td>
             </div>
             <div class="col-md-3">
@@ -40,4 +40,7 @@
       <% end %>
     </tbody>
   </table>
+
+  <span>Bar chart showing commits count grouped by date</span>
+  <div id="chart"></div>
 <%end%>

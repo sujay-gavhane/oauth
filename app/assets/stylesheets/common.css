@@ -17,3 +17,9 @@
 table{
 	text-align: left !important;
 }
+#chart div {
+  display: inline-block;
+  background: #4285F4;
+  width: 80px;
+  margin-right: 3px;
+}

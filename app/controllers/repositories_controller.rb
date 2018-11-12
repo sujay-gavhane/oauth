@@ -15,11 +15,13 @@ class RepositoriesController < ApplicationController
     from_date = Date.strptime(params[:from_date], '%m/%d/%Y')
                     .strftime('%Y-%m-%d')
     to_date = Date.strptime(params[:to_date], '%m/%d/%Y').strftime('%Y-%m-%d')
+    b = []
     @response = github_service.show(
       ENV['GITHUB_SECRET_TOKEN'], params[:id],
       session[:token], session[:user_name], from_date, to_date
     )
     @response = JSON.parse(@response.body)
+    @graph_data = @response.group_by { |res| res['commit']['committer']['date'].to_date}.map { |a| { a[0].strftime('%d') => a[1].count } }.reduce Hash.new, :merge
   end
 
   private

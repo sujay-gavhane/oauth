@@ -10,3 +10,10 @@ d3.selectAll("tr")
 d3.selectAll("tr").style("color", function() {
   return "hsl(" + Math.random() * 360 + ",100%,50%)";
 });
+d3.select('#chart')
+  .selectAll("div")
+  .data(<%= @graph_data.values %>)
+  .enter()
+  .append("div")
+  .text((d)=> d + 'commits')
+  .style("height", (d)=> d * 5 + "px")
